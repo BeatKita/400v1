@@ -2,6 +2,7 @@
 
 require_once '../App/Utils/Database/Database.php';
 use PERCOLATOR\MinQuiz\Utils\Database\PdoDb;
+
 $bdd = new PdoDb;
 $question = $bdd->requeteRandomQ('question');
 $response = $bdd->requeteRandomA('response');
