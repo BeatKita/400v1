@@ -1,0 +1,25 @@
+jeudi aprem:
+
+base de données
+
+
+
+dimanche:
+
+mise en forme du code
+
+
+
+lundi -> mercredi:
+
+soin backend
++
+powerpoint
+
+
+
+jeudi:
+
+soin frontend
++
+powerpoint
