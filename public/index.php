@@ -3,8 +3,8 @@
 require_once '../App/Utils/Database/Database.php';
 use PERCOLATOR\MinQuiz\Utils\Database\PdoDb;
 $bdd = new PdoDb;
-$question = $bdd->requeteRandomQ('question');
-$response = $bdd->requeteRandomA('response');
+$questions = $bdd->requeteRandomQ('question');
+$responses = $bdd->requeteSimple('SELECT question_id, answer FROM response JOIN question on question.id = response.question_id');
 
 ?>
 <!DOCTYPE html>
@@ -23,8 +23,15 @@ $response = $bdd->requeteRandomA('response');
     ?>
 
     <?php
-    print_r($question);    
-    print_r($response);    
+        
+    foreach ($questions as $question){
+            print_r($question);
+            foreach ($responses as $response) {
+                if ($response["question_id"] == $question["id"]) {
+                print_r($response);
+            }
+        }
+    }    
     ?>
 
     <?php
