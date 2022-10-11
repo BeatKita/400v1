@@ -1,4 +1,6 @@
 <?php
+/*
+Cette partie se trouve maintenant dans body.php
 
 require_once '../App/Utils/Database/Database.php';
 use PERCOLATOR\MinQuiz\Utils\Database\PdoDb;
@@ -6,6 +8,7 @@ $bdd = new PdoDb;
 $questions = $bdd->requeteRandomQ('question');
 $responses = $bdd->requeteSimple('SELECT question_id, answer FROM response JOIN question on question.id = response.question_id');
 
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +26,10 @@ $responses = $bdd->requeteSimple('SELECT question_id, answer FROM response JOIN 
     ?>
 
     <?php
-        
+        require_once(__DIR__ . '../../Views/body.php');
+        /*
+        Cette partie se trouve maintenant dans body.php
+
     foreach ($questions as $question){
             print_r($question);
             foreach ($responses as $response) {
@@ -31,7 +37,7 @@ $responses = $bdd->requeteSimple('SELECT question_id, answer FROM response JOIN 
                 print_r($response);
             }
         }
-    }    
+    }    */
     ?>
 
     <?php

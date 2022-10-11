@@ -160,7 +160,7 @@ CREATE TABLE
 INSERT INTO
     `response` (
         `id`,
-        `question-id`,
+        `question_id`,
         `answer`,
         `answer-check`
     )
@@ -489,7 +489,7 @@ ALTER TABLE `question` ADD PRIMARY KEY (`id`);
 ALTER TABLE `response`
 ADD PRIMARY KEY (`id`),
 ADD
-    KEY `fk_question_id_question_id` (`question-id`);
+    KEY `fk_question_id_question_id` (`question_id`);
 
 --
 
@@ -531,7 +531,7 @@ ALTER TABLE
 
 ALTER TABLE `response`
 ADD
-    CONSTRAINT `fk_question_id_question_id` FOREIGN KEY (`question-id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    CONSTRAINT `fk_question_id_question_id` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 COMMIT;
 

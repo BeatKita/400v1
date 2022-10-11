@@ -42,7 +42,7 @@ class PdoDb
         if ($where) {
             $completion = ' WHERE ' . $key . '=' . $val;
         }
-        if ($order) {
+        if ($order) {   
             $completion .= ' ORDER BY ' . $whatOrder . ' ' . $direction;
         }
         if ($limit) {
